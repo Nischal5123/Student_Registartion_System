@@ -22,7 +22,7 @@ $query="SELECT cname FROM regis WHERE uname='$name'";
 $results=mysqli_query($connect,$query) or die(mysqli_error());
 
 echo '<p class="text">COURSES ENROLLED BY: <br>'.$name.'</br> </p>';
-echo "<table  border=’2’>\n";
+echo '<table class="center" border="5">';
 while ($rows=mysqli_fetch_assoc($results)) {
 echo "<tr>\n"; 
 foreach($rows as $value) 
