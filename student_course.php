@@ -13,7 +13,7 @@ $cname=$_POST['course'];
 $name=$_POST['name'];
 
 $q="SELECT count(cname) FROM regis WHERE uname='$name'";                 // for verifying the total courses by a student
-$r=mysqli_query($connect,$q) or die(mysqli_error());
+$r=mysqli_query($connect,$q) or die(mysqli_error($connect));
 $reg=mysqli_fetch_assoc($r);
 foreach($reg as $value)
 {
@@ -38,7 +38,7 @@ exit();
 }
 
 $q2="SELECT cname FROM regis WHERE cname='$cname' AND uname='$name'";                 // for verifying the if student has already registered for the course
-$r2=mysqli_query($connect,$q2) or die(mysqli_error());
+$r2=mysqli_query($connect,$q2) or die(mysqli_error($connect));
 $reg2=mysqli_fetch_assoc($r2);
 if(mysqli_num_rows($r2) != 0)
 {echo "<a href='new_course_reg.php'>Back</a><br/>COURSE ALREADY REGISTERED BY STUDENT $name";
@@ -48,7 +48,7 @@ exit();
 
 
 $query="SELECT name FROM course WHERE name='$cname'";              //for inserting the record
-$results=mysqli_query($connect,$query) or die(mysqli_error());
+$results=mysqli_query($connect,$query) or die(mysqli_error($connect));
 if($rows=mysqli_fetch_assoc($results)) 
 {
 foreach($rows as $value) 
@@ -59,17 +59,23 @@ echo"<br/>";
 echo"<a href='new_course_reg.php'>Back</a></br>";
 $insert = "INSERT INTO regis(uname,cname)
 values('$name','$value')";
-$results=mysqli_query($connect,$insert) or die(mysqli_error());
+$results=mysqli_query($connect,$insert) or die(mysqli_error($connect));
 }
 else
 {
-echo"error in registration";
+echo '<div>
+<p>COURSE DOESNOT EXIT </p>
+<form action="new_course_reg.php">   
+    <input type="submit" value="GO BACK TO REGISTRATION PAGE" />
+</form><br></br></button></b>
+<br>
+<br>';;
 exit();
 }
 
 $sum=0;
 $q2="SELECT count(cname) FROM regis WHERE uname='$name'";                 // total credit of courses for each student
-$r2=mysqli_query($connect,$q2) or die(mysqli_error());
+$r2=mysqli_query($connect,$q2) or die(mysqli_error($connect));
 $reg2=mysqli_fetch_assoc($r2);
 foreach($reg2 as $value2)
 {   
@@ -77,13 +83,13 @@ foreach($reg2 as $value2)
     {
 	
     $q3="SELECT cname FROM regis WHERE uname='$name'";                 
-    $r3=mysqli_query($connect,$q3) or die(mysqli_error());
+    $r3=mysqli_query($connect,$q3) or die(mysqli_error($connect));
     while($reg3=mysqli_fetch_assoc($r3))
 	{
     foreach($reg3 as $value3)
       {
 	  	$q4="SELECT credit FROM course WHERE name='$value3'";                 
-        $r4=mysqli_query($connect,$q4) or die(mysqli_error());
+        $r4=mysqli_query($connect,$q4) or die(mysqli_error($connect));
         $reg4=mysqli_fetch_assoc($r4); 
          foreach($reg4 as $value4)
          {  

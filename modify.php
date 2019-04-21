@@ -9,14 +9,20 @@ $connect = mysqli_connect("localhost","root","") or die ("check your server conn
 
 mysqli_select_db($connect,"2008b4a5723p");
 
-$info=$_POST['info'];
+$information=$_POST['info'];
+
+//echo $value;
+//$value-mysqli_real_escape_string($connect,$value);
+//$ram="hero";
+
+$add = "ALTER TABLE members ADD `$information` VARCHAR(25) NOT NULL";
+
+$query = mysqli_query($connect,$add)or die(mysqli_error($connect));//problem new column is created but data doesnot get input
+
+$information=$_POST['info'];
 $value=$_POST['value'];
 
-$add = "ALTER TABLE members ADD `$info` VARCHAR(25)";
-
-$query = mysqli_query($connect,$add)or die(mysqli_error());
-
-$query2 = mysqli_query($connect,"INSERT INTO members ('$info') VALUES ('$value')");
+$query2 = mysqli_query($connect,"INSERT INTO members('$information') VALUES('$value')");
 echo("Record Added Sucessfully");
 
 ?>

@@ -8,7 +8,8 @@ margin-top:250px;
 body {
   background-image: url("https://i.pinimg.com/originals/eb/db/a4/ebdba451c7b0ff597e27909aade103d1.jpg");
   background-position: center;
-  margin-bottom:7500px;
+  margin-bottom:100px;
+  background-repeat:  no-repeat;
 }
 
 /*BUTTON*/
@@ -67,6 +68,10 @@ body {
 	
 	
 	/*TABLE*/
+	table {
+background-color: #d9ffd9;
+background-image: url(image/back.gif);
+}
 	.CSSTableGenerator {
 	margin:0px;padding:0px;
 	width:100%;

@@ -13,7 +13,7 @@ exit();
 </head>
 <body>
 <form name="form1" action="default.php" >
-<input type="submit" class="myButton" name="Submit" value="Login">
+<input type="submit" class="myButton" name="Submit" value="Logout">
 </form>
 
 <h2>NEW COURSE REGISTRATION</h2>
@@ -29,8 +29,8 @@ Instructor :<input type="text" name="instructor"><br/>
 
 </form>
 <footer>
-            <a href="default.aspx" style="color: white;">Back to home</a>
-            © 2013 Gaikwad Company, Inc. Course Registration System 
+            <a href="default.php" style="color: white;">Back to home</a>
+        
         </footer>
 </body>
 </html>	

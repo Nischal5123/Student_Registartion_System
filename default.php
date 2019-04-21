@@ -33,13 +33,13 @@ else{
   }
 ?>
 
-<table  width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#ADD8E6">
+<table  width="300" border="0" align="center" cellpadding="0" cellspacing="1" background="image.png">
 <tr>
 <form name="form1" method="get" action="result.php" onsubmit="return validate(this);">
 <td>
-<table  width="100%" border="0" cellpadding="7" cellspacing="1" bgcolor="#ADD8E6">
+<table  height="300%" width="100%" border="0" cellpadding="20" cellspacing="1" bgcolor="#000000">
 <tr>
-<td colspan="3"><strong><center><h2>Student Login</h2></center></strong></td>
+<td colspan="6"bgcolor="#ff0000" ><strong><center><h2 >Student Login</h2></center></strong></td>
 </tr>
 <tr>
 <td></td>
@@ -91,6 +91,13 @@ function validate(form){
 </head>
 <body>
 <div id="div1"></div>
+<div >
+  <br>
+  <p> Want to book a flight </p>
+  <form action="booking_system/form.php">
+    <input type="submit" value="BOOK A CLASS" class="btn btn-block btn-primary"/>
+</form><br></br></button>
+</div>
 
 
 </body>

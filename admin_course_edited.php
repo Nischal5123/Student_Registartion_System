@@ -14,7 +14,7 @@ $course=$_POST['course'];
 $new=$_POST['new'];
 
 $query = "update regis SET cname = '$new' WHERE uname = '$name' AND cname = '$course'";
-$results=mysqli_query($connect,$query) or die(mysqli_error());
+$results=mysqli_query($connect,$query) or die(mysqli_error($connect));
 echo"COURSE CHANGED SUCESSFULLY";
 
 ?>
