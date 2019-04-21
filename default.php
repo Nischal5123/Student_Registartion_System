@@ -33,13 +33,13 @@ else{
   }
 ?>
 
-<table  width="300" border="0" align="center" cellpadding="0" cellspacing="1" background="image.png">
+<table  width="300" border="0" align="center" cellpadding="0" cellspacing="1" background-color="#ffffff">
 <tr>
 <form name="form1" method="get" action="result.php" onsubmit="return validate(this);">
 <td>
 <table  height="300%" width="100%" border="0" cellpadding="20" cellspacing="1" bgcolor="#000000">
 <tr>
-<td colspan="6"bgcolor="#ff0000" ><strong><center><h2 >Student Login</h2></center></strong></td>
+<td colspan="6"bgcolor="#ffffff" ><strong><center><h2 >Student Login</h2></center></strong></td>
 </tr>
 <tr>
 <td></td>
@@ -87,16 +87,18 @@ function validate(form){
  return true;
 }
 </script>
-<link rel="stylesheet" type="text/css" href="style.css" /> 
+<link rel="stylesheet" type="text/css" href="newstyle.css" /> 
 </head>
 <body>
 <div id="div1"></div>
 <div >
   <br>
-  <p> Want to Schedule an Appointment</p>
+  <br>
+  <p></p>
   <form action="form.php">
-    <input type="submit" value="BOOK A CLASS" class="btn btn-block btn-primary"/>
-</form><br></br></button>
+    <input type="submit" value="PROSPECTIVE STUDENTS:Get a Tour" class="myButton"/>
+</form></button>
+
 </div>
 
 

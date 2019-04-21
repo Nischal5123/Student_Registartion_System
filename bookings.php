@@ -32,17 +32,17 @@ if(isset($_POST['booking'])){
 ?>
 
 <link href="//db.onlinewebfonts.com/c/a4e256ed67403c6ad5d43937ed48a77b?family=Core+Sans+N+W01+35+Light" rel="stylesheet" type="text/css"/>
-<link rel="stylesheet" href="form.css" type="text/css">
+<link rel="stylesheet" href="new_form.css" type="text/css">
 <div class="body-content">
   <div class="module">
-    <h1>BOOKING A FLIGHT WITH US</h1>
+    <h1>Come Visit our Beautiful Campus</h1>
     <form class="form" action="bookings.php" method="post" enctype="multipart/form-data" autocomplete="off">
       <div class="alert alert-error"><?php  $_SESSION['message']  ?></div>
-      <input type="text" placeholder="Departure City" name="departure_City" required />
-      <input type="text" placeholder="Destination" name="destination" autocomplete="Nepal" required />
-      <input type="date" placeholder="Departure Date" name="departure_Date" required />
+      <input type="text" placeholder="Current School" name="departure_City" required />
+      <input type="text" placeholder="Major of Interest" name="destination" autocomplete="Nepal" required />
+      <input type="date" placeholder="University Visit Date" name="departure_Date" required />
      
-      <input type="submit" value="BOOK MY TRIP" name="booking" class="btn btn-block btn-primary" />
+      <input type="submit" value="CONFIRM MY APPOITMENT" name="booking" class="btn btn-block btn-primary" />
       
     </form>
   </div>

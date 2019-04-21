@@ -1,11 +1,11 @@
 
 <?php include 'connection.php';?>
-<link rel="stylesheet" href="form.css">
-<body  style="background:url('https://images.pexels.com/photos/8394/flight-sky-clouds-fly.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') #0f2439 no-repeat center ;">
+<link rel="stylesheet" href="new_form.css">
+<body  style="background:url('https://globalaffairs.fiu.edu/wp-content/uploads/sites/40/2017/05/appointment_policy_pic.jpg') #0f2439 no-repeat center ;">
 <div class="body content">
     <div class="welcome">
         <div class="alert alert-success"><?= $_SESSION['message'] ?></div>
-        <b><p  style="font-size: 2.7em; ">Welcome </p> <span class="user"  style="font-size: 3.7em;color: #ffffff;"><?= $_SESSION['username'] ?></span><br />
+        <b><p  style="font-size: 3.7em; color:#f00000; ">Welcome </p> <span class="user"  style="font-size: 2.7em;color: #000000;"><?= $_SESSION['username'] ?></span><br />
         <br>
         <br>
         <!--SCROOLING TEXT-->
@@ -58,7 +58,7 @@
 
 <!-- HTML -->   
 <div class="example1">
-<h3>YOUR CONFIRMED BOOKINGS </h3>
+<h3>YOUR APPOINTMENT WITH TROY UNIVERSITY </h3>
 </div>
         <br />
 <style>
@@ -90,9 +90,9 @@ table.table1 th {
 </style>
         <table class="table1" border= "1">
             <tr>
-                <th>Departure City</th>
-                <th>Departure Date</th> 
-                <th>Destination</th>
+                <th>Major of Interest</th>
+                <th>University Visit Date</th> 
+                <th>Current School</th>
             </tr>
                 
 
@@ -116,7 +116,7 @@ $stmt = "SELECT* FROM booking WHERE username='$username'";
 echo '</table>';
 echo '<div id="registered">
 <form action="bookings.php">   
-    <input type="submit" value="MAKE MY TRIP" class="btn btn-block btn-primary"/>
+    <input type="submit" value="MAKE ANOTHER APOINTMENT" class="btn btn-block btn-primary"/>
 </form><br></br></button></b>
 <br>
 <br>';

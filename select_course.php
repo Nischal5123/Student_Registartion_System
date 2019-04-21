@@ -12,9 +12,9 @@ mysqli_select_db($connect,"2008b4a5723p");
 $name=$_POST['cname'];
 $query="SELECT uname FROM regis WHERE cname='$name'";
 $results=mysqli_query($connect,$query) or die(mysqli_error());
-echo "<a href='admin_page.php'>Admin Login</a><br/>";
+
 echo "Students enrolled in : ".$name."";
-echo "<table  border=’2’>\n";
+echo "<table  border=â€™2â€™>\n";
 while ($rows=mysqli_fetch_assoc($results)) {
 echo "<tr>\n"; 
 foreach($rows as $value) 
@@ -34,5 +34,6 @@ echo "</table>\n";
 </head>
 <body>
 <div id="div1"></div>
+<a href='result1.php'>Admin Login</a><br/>";
 </body>
 </html>	

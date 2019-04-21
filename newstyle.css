@@ -7,8 +7,8 @@ margin-top:250px;
 } */
 body {
   background-image: url("https://i.pinimg.com/originals/eb/db/a4/ebdba451c7b0ff597e27909aade103d1.jpg");
+  background-size: 1200px 500px;
   background-position: center;
-  margin-bottom:100px;
   background-repeat:  no-repeat;
 }
 
@@ -81,7 +81,7 @@ text-align: center;
 	
 	/*TABLE*/
 	table {
-background-color: #d9ffd9;
+background-color: #ffffff;
 background-image: url(image/back.gif);
 }
 	.CSSTableGenerator {

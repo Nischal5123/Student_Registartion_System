@@ -36,9 +36,9 @@ echo "</table>\n";
 ?>
 <br/>
 <form method="post" action="course_edited.php">
-User name   :<input type="text" name="name"><br/>
+User name       :<input type="text" name="name"><br/>
 Course to change:<input type="text" name="course"><br/>
-New course:<input type="text" name="new"><br/>
+New course      :<input type="text" name="new"><br/>
 
 <input type="submit" class="myButton" name="submit" value="Change Course">
 </form>
