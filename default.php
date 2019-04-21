@@ -93,8 +93,8 @@ function validate(form){
 <div id="div1"></div>
 <div >
   <br>
-  <p> Want to book a flight </p>
-  <form action="booking_system/form.php">
+  <p> Want to Schedule an Appointment</p>
+  <form action="form.php">
     <input type="submit" value="BOOK A CLASS" class="btn btn-block btn-primary"/>
 </form><br></br></button>
 </div>
