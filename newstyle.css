@@ -63,12 +63,14 @@ body {
     .myButton:active {
         position:relative;
         top:1px;
+
     }
 p.text,a.text{
-	
-text-shadow: 3px 2px red;
-font-size:150% ;
+font-color:yellow;	
+text-shadow: 1px 1px yellow;
+font-size:300% ;
 text-align: center;
+
 }
 	
 	
