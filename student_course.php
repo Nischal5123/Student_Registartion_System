@@ -26,7 +26,8 @@ exit();
 }
 }
 
-$q1="SELECT count(cname) FROM regis WHERE cname='$cname'";                 
+$q1="SELECT count(cname) FROM regis WHERE cname='$cname'";
+$r1=mysqli_query($connect,$q1) or die(mysqli_error());    
 $reg1=mysqli_fetch_assoc($r1);
 foreach($reg1 as $value1)
 {
