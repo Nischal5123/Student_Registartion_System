@@ -5,6 +5,8 @@ if($_SESSION['authuser']!=1)
 echo"ACCESS DENIED";
 exit();
 }
+$_SESSION['username']="";//initializing session variables
+$_SESSION['pass']="";
 
 $connect = mysqli_connect("localhost", "root", "") or die ("check your server connection");
 $uname= $_GET['myusername'];
@@ -68,7 +70,7 @@ echo "</table>";
 
 
 <?php
-echo"<center><h2>REGISTERED COURSES</h2></center>";
+echo"<center><h2 class='text'>REGISTERED COURSES</h2></center>";
 $query="Select regis.cname, course.credit, course.instructor 
 FROM course 
 INNER JOIN regis 
@@ -107,8 +109,15 @@ echo "</table></center>\n";
 </body>
 </html>	
 
+<?php
 
+if (isset($_GET['myusername'])) {
+    $uname= $_GET['myusername'];
+}
 
+if (isset($_GET['mypassword'])) {
+    $uname= $_GET['mypassword'];
+}
 
 
 

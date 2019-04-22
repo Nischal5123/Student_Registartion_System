@@ -35,7 +35,7 @@ else{
 <tr>
 <form name="form1" method="get" action="result.php" onsubmit="return validate(this);">
 <td>
-<table  height="300%" width="100%" border="0" cellpadding="20" cellspacing="1" bgcolor="#000000">
+<table  height="200%" width="100%" border="0" cellpadding="20" cellspacing="1" bgcolor="#000000">
 <tr>
 <td colspan="6"bgcolor="#ffffff" ><strong><center><h2 >Student Login</h2></center></strong></td>
 </tr>
@@ -64,7 +64,13 @@ else{
 <form name="form1" method="post" action="admin_page.php" style="float:left">
 <input type="submit" class="myButton" name="Submit" value="Admin Login">
 </form>
-
+<br>
+<br>
+<br>
+ <form action="form.php">
+    <input type="submit" value="PROSPECTIVE STUDENTS:Get a Tour" class="myButton"/>
+    
+</form></button>
 <html>
 <head>
 <script type="text/javascript">
@@ -86,6 +92,15 @@ function validate(form){
 }
 </script>
 <link rel="stylesheet" type="text/css" href="newstyle.css" /> 
+<style>
+body {
+  background-image: url("https://artbeatcolumbus.org/wp-content/uploads/2018/02/Troy-Trojan--768x490.jpg");
+  /*background-size: 1200px 500px;*/
+  background-size:contain;
+  background-size: cover;
+  background-position: center;
+  background-repeat:  no-repeat;
+}
 </head>
 <body>
 <div id="div1"></div>
@@ -93,9 +108,7 @@ function validate(form){
   <br>
   <br>
   <p></p>
-  <form action="form.php">
-    <input type="submit" value="PROSPECTIVE STUDENTS:Get a Tour" class="myButton"/>
-</form></button>
+ 
 
 </div>
 

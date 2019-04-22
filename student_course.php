@@ -27,7 +27,7 @@ exit();
 }
 
 $q1="SELECT count(cname) FROM regis WHERE cname='$cname'";
-$r1=mysqli_query($connect,$q1) or die(mysqli_error());    
+$r1=mysqli_query($connect,$q1) or die(mysqli_error($connect));    
 $reg1=mysqli_fetch_assoc($r1);
 foreach($reg1 as $value1)
 {
@@ -75,36 +75,39 @@ exit();
 }
 
 $sum=0;
-$q2="SELECT count(cname) FROM regis WHERE uname='$name'";                 
-$reg2=mysqli_fetch_assoc($r2);
+$q2="SELECT count(cname) FROM regis WHERE uname='$name'";
+$r2=mysqli_query($connect,$q2) or die(mysqli_error($connect));       
+$reg2=mysqli_fetch_assoc($r2);          
 foreach($reg2 as $value2)
 {   
-    if($value2 ==4)														 
-    {
+        if($value2 ==4)														 
+        {
 	
-    $q3="SELECT cname FROM regis WHERE uname='$name'";                 
-    $r3=mysqli_query($connect,$q3) or die(mysqli_error($connect));
-    while($reg3=mysqli_fetch_assoc($r3))
-	{
-    foreach($reg3 as $value3)
-      {
-	  	$q4="SELECT credit FROM course WHERE name='$value3'";                 
-        $r4=mysqli_query($connect,$q4) or die(mysqli_error($connect));
-        $reg4=mysqli_fetch_assoc($r4); 
-         foreach($reg4 as $value4)
-         {  
-         $sum=$sum + $value4;		 
-	     }                             
-	   }  
-	}  
+        $q3="SELECT cname FROM regis WHERE uname='$name'";                 
+        $r3=mysqli_query($connect,$q3) or die(mysqli_error($connect));
+        while($reg3=mysqli_fetch_assoc($r3))
+	    {
+        foreach($reg3 as $value3)
+            {
+	  	     $q4="SELECT credit FROM course WHERE name='$value3'";                 
+             $r4=mysqli_query($connect,$q4) or die(mysqli_error($connect));
+             $reg4=mysqli_fetch_assoc($r4); 
+                foreach($reg4 as $value4)
+                {  
+                $sum=$sum + $value4;		 
+	             }                             
+	         }  
+	       }
+              
          		    if($sum < 9)										
 					{
 					printf("REGISTRATION ERROR(TOTAL CREDIT IS LESS THAN 9)");
 					exit();
 					}  
  }
-} 
-?>
+}
+ //header('location:result.php');
+ ?>
 
 <html>
 <head>
