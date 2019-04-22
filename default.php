@@ -6,19 +6,16 @@ $_SESSION['authuser']=1;
 
 if(isset($_POST['save_btn']))
     {
-        //write some of your code here, if necessary
         
-     
-	 
-$connect = mysqli_connect("localhost", "root", "") or die ("check your server connection");
+$connect = mysqli_connect("localhost", "root", "") or die ("check your server connection");//checking connection
 $uname= $_GET['myusername'];
 $upass= $_GET['mypassword'];
 
 $_SESSION['username']=$uname;
 $_SESSION['pass']=$upass;
 
-mysqli_select_db ($connect,"2008b4a5723p");
-$query="SELECT * FROM members WHERE username='$uname' and password='$upass'";
+mysqli_select_db ($connect,"webexpress");
+$query="SELECT * FROM members WHERE username='$uname' and password='$upass'";//match password and username 
 
 $results=mysqli_query($connect,$query) or die(mysqli_error());
 
@@ -32,6 +29,7 @@ else{
   }
   }
 ?>
+
 
 <table  width="300" border="0" align="center" cellpadding="0" cellspacing="1" background-color="#ffffff">
 <tr>

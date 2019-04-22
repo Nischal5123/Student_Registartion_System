@@ -11,7 +11,7 @@ exit();
 }
 $connect = mysqli_connect("localhost", "root", "") or die ("check your server connection");
 $name=$_SESSION['username'];
-mysqli_select_db ($connect,"2008b4a5723p");
+mysqli_select_db ($connect,"webexpress");
 echo"COURSES TAKEN BY '$name' :<br/>";
 $query="Select regis.cname, course.credit, course.instructor 
 FROM course 

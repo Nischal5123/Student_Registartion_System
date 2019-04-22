@@ -1,3 +1,4 @@
+<!-- for prospective students-->
 <link rel="stylesheet" href="form.css">
 <?php include 'connection.php'; ?>
 <body style="background:url('https://www.usnews.com/img/college-photo_35695.jpg'); background-attachment:center; background-repeat: no-repeat;color:#0ff4ff no-repeat center top ;">

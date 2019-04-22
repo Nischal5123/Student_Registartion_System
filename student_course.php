@@ -7,12 +7,13 @@ exit();
 }
 
 $connect = mysqli_connect("localhost", "root", "") or die ("check your server connection.");
-mysqli_select_db($connect,"2008b4a5723p");
+mysqli_select_db($connect,"webexpress");
 
 $cname=$_POST['course'];
 $name=$_POST['name'];
+//VERIFICATIONS----------------------------------------------------------------------------------
 
-$q="SELECT count(cname) FROM regis WHERE uname='$name'";                 // for verifying the total courses by a student
+$q="SELECT count(cname) FROM regis WHERE uname='$name'";                 
 $r=mysqli_query($connect,$q) or die(mysqli_error($connect));
 $reg=mysqli_fetch_assoc($r);
 foreach($reg as $value)
@@ -25,8 +26,7 @@ exit();
 }
 }
 
-$q1="SELECT count(cname) FROM regis WHERE cname='$cname'";                 // for verifying the total students in the course
-$r1=mysqli_query($connect,$q1) or die(mysqli_error());
+$q1="SELECT count(cname) FROM regis WHERE cname='$cname'";                 
 $reg1=mysqli_fetch_assoc($r1);
 foreach($reg1 as $value1)
 {
@@ -37,7 +37,7 @@ exit();
 }
 }
 
-$q2="SELECT cname FROM regis WHERE cname='$cname' AND uname='$name'";                 // for verifying the if student has already registered for the course
+$q2="SELECT cname FROM regis WHERE cname='$cname' AND uname='$name'";                  
 $r2=mysqli_query($connect,$q2) or die(mysqli_error($connect));
 $reg2=mysqli_fetch_assoc($r2);
 if(mysqli_num_rows($r2) != 0)
@@ -74,12 +74,11 @@ exit();
 }
 
 $sum=0;
-$q2="SELECT count(cname) FROM regis WHERE uname='$name'";                 // total credit of courses for each student
-$r2=mysqli_query($connect,$q2) or die(mysqli_error($connect));
+$q2="SELECT count(cname) FROM regis WHERE uname='$name'";                 
 $reg2=mysqli_fetch_assoc($r2);
 foreach($reg2 as $value2)
 {   
-    if($value2 ==4)														//If 4 courses registered the will check credit hours 
+    if($value2 ==4)														 
     {
 	
     $q3="SELECT cname FROM regis WHERE uname='$name'";                 
@@ -97,7 +96,7 @@ foreach($reg2 as $value2)
 	     }                             
 	   }  
 	}  
-         		    if($sum < 9)										//If credit hours are less then 9 then registration error
+         		    if($sum < 9)										
 					{
 					printf("REGISTRATION ERROR(TOTAL CREDIT IS LESS THAN 9)");
 					exit();

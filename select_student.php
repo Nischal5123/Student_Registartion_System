@@ -15,7 +15,7 @@ exit();
 }
 
 $connect = mysqli_connect("localhost", "root", "") or die ("check your server connection.");
-mysqli_select_db($connect,"2008b4a5723p");
+mysqli_select_db($connect,"webexpress");
 
 $name=$_POST['name'];
 $query="SELECT cname FROM regis WHERE uname='$name'";
@@ -38,5 +38,7 @@ echo "</table>\n";
 <br>
 <br>
 <?php
-echo '<a href="default.php" class="bold_text">Logout</a><br/>';
+echo '<form action="result1.php">
+    <input type="submit" value="ADMIN PAGE" class="myButton"/>
+</form><br></br></button>';
 ?>

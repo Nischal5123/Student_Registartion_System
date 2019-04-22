@@ -7,7 +7,7 @@ exit();
 }
 $connect = mysqli_connect("localhost", "root", "") or die ("check your server connection.");
 
-mysqli_select_db($connect,"2008b4a5723p");
+mysqli_select_db($connect,"webexpress");
 
 
 $remove = "DELETE FROM regis WHERE  cname='$_GET[cname]' and uname='$_GET[uuname]'";

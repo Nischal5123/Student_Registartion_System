@@ -6,15 +6,28 @@ echo"ACCESS DENIED";
 exit();
 }
 
+if(isset($_POST['Submit'])){
+
 $name= $_POST['myusername'];
 $pass= $_POST['mypassword'];
 
 
-if($name!="admin" && $pass!="admin")
-  {
-echo"ACCESS DENIED";
-exit();
+
+	if($name!="admin" && $pass!="admin")
+  	{
+	echo"ACCESS DENIED";
+	exit();
+	}
 }
+else{
+	$name="admin";
+    $pass="admin";
+}	
+
+
+
+$_SESSION['username']=$name;
+$_SESSION['pass']=$pass;
 ?>
 <html>
 <body>

@@ -1,7 +1,7 @@
 
 <?php include 'connection.php';?>
 <?php
-
+//this is for prospective students
 if(isset($_POST['login_user'])){
   $user=mysqli_real_escape_string($mysqli,$_POST['username' ]);
   $password=mysqli_real_escape_string($mysqli,$_POST['password']);

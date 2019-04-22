@@ -13,7 +13,7 @@ $upass= $_GET['mypassword'];
 $_SESSION['username']=$uname;
 $_SESSION['pass']=$upass;
 
-mysqli_select_db ($connect,"2008b4a5723p");
+mysqli_select_db ($connect,"webexpress");
 $query="SELECT * FROM members WHERE username='$uname' and password='$upass'";
 
 $results=mysqli_query($connect,$query) or die(mysqli_error($connect));

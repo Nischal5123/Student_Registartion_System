@@ -8,7 +8,7 @@ exit();
 $connect = mysqli_connect("localhost", "root", "") or die ("check your server connection.");
 
 
-mysqli_select_db($connect,"2008b4a5723p");
+mysqli_select_db($connect,"webexpress");
 $name = $_POST['name'];
 $pass = $_POST['pass'];
 $branch = $_POST['branch'];
