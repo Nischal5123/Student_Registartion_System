@@ -1,27 +1,28 @@
 <?php
 session_start();
-session_destroy();
-session_start();
+//session_destroy();
+//session_start();
 $_SESSION['authuser']=1;
 
-if(isset($_POST['save_btn']))
-    {
-        
 $connect = mysqli_connect("localhost", "root", "") or die ("check your server connection");//checking connection
-$uname= $_GET['myusername'];
-$upass= $_GET['mypassword'];
+
+if(isset($_POST['Submit'])){
+        
+
+$uname= $_POST['myusername'];
+$upass= $_POST['mypassword'];
 
 $_SESSION['username']=$uname;
 $_SESSION['pass']=$upass;
 
 mysqli_select_db ($connect,"webexpress");
 $query="SELECT * FROM members WHERE username='$uname' and password='$upass'";//match password and username 
-
 $results=mysqli_query($connect,$query) or die(mysqli_error());
 
 if($row = mysqli_fetch_array($results))
 {
 echo'<script> window.location="SchoolDB/result.php"; </script> ';
+header("location: result.php");
 }
 else{
   echo"LOGIN FAILED(INVALID USERNAME OR PASSWORD)";
@@ -33,7 +34,7 @@ else{
 
 <table  width="300" border="0" align="center" cellpadding="0" cellspacing="1" background-color="#ffffff">
 <tr>
-<form name="form1" method="get" action="result.php" onsubmit="return validate(this);">
+<form name="form1" method="post" action="default.php" onsubmit="return validate(this);">
 <td>
 <table  height="200%" width="100%" border="0" cellpadding="20" cellspacing="1" bgcolor="#000000">
 <tr>
@@ -68,7 +69,7 @@ else{
 <br>
 <br>
  <form action="form.php">
-    <input type="submit" value="PROSPECTIVE STUDENTS:Get a Tour" class="myButton"/>
+    <input type="submit" value="PROSPECTIVE STUDENTS:post a Tour" class="myButton"/>
     
 </form></button>
 <html>

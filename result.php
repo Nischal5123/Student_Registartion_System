@@ -5,15 +5,16 @@ if($_SESSION['authuser']!=1)
 echo"ACCESS DENIED";
 exit();
 }
-$_SESSION['username']="";//initializing session variables
-$_SESSION['pass']="";
+//$_SESSION['username']="";//initializing session variables
+//$_SESSION['pass']="";
 
 $connect = mysqli_connect("localhost", "root", "") or die ("check your server connection");
-$uname= $_GET['myusername'];
-$upass= $_GET['mypassword'];
+//if(isset($_POST['']))
+//$uname= $_POST['myusername'];
+//$upass= $_POST['mypassword'];
 
-$_SESSION['username']=$uname;
-$_SESSION['pass']=$upass;
+$uname=$_SESSION['username'];
+$upass=$_SESSION['pass'];
 
 mysqli_select_db ($connect,"webexpress");
 $query="SELECT * FROM members WHERE username='$uname' and password='$upass'";
@@ -94,7 +95,7 @@ echo "</table></center>\n";
 ?>
 <br/>
 
-<form method="get" action="edit_course.php" style="float:right">
+<form method="post" action="edit_course.php" style="float:right">
 <input type="submit" class="myButton" name="add" value="Edit Course(s)">
 </form>
 
@@ -111,13 +112,7 @@ echo "</table></center>\n";
 
 <?php
 
-if (isset($_GET['myusername'])) {
-    $uname= $_GET['myusername'];
-}
 
-if (isset($_GET['mypassword'])) {
-    $uname= $_GET['mypassword'];
-}
 
 
 

@@ -35,6 +35,9 @@ Course ID :<input type="text" name="course">
 <br/>
 <input type="submit" class="myButton" name="submit" value="Register">
 </form>
+<?php
+echo"<a href='result.php'>Back</a><br/>COURSE CHANGED SUCESSFULLY";
+?>
 </body>
 </html>	
 
