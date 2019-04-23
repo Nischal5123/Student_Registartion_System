@@ -42,11 +42,11 @@ else{
 </tr>
 <tr>
 <td></td>
-<td><center><input name="myusername" placeholder="USERNAME" type="text" id="myusername"></center></td>
+<td><center><input name="myusername" placeholder="USERNAME" type="text" id="myusername" required=""></center></td>
 </tr>
 <tr>
 <td></td>
-<center><td><center><input name="mypassword" placeholder="PASSWORD" type="password" id="mypassword"></center></td></center>
+<center><td><center><input name="mypassword" placeholder="PASSWORD" type="password" id="mypassword" required></center></td></center>
 </tr>
 <tr>
 <td>&nbsp;</td>
@@ -69,7 +69,7 @@ else{
 <br>
 <br>
  <form action="form.php">
-    <input type="submit" value="PROSPECTIVE STUDENTS:post a Tour" class="myButton"/>
+    <input type="submit" value="PROSPECTIVE STUDENTS:Start a Tour" class="myButton"/>
     
 </form></button>
 <html>

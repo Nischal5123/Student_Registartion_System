@@ -114,12 +114,23 @@ $stmt = "SELECT* FROM booking WHERE username='$username'";
         echo "</td></tr>";
 }
 echo '</table>';
+echo '<div id="registered">
+<form action="bookings.php">   
+    <input type="submit" value="REGISTER FOR A TOUR" class="btn btn-block btn-primary"/>
+</form><br></br></button></b>
+<br>
+<br>';
 
-
-echo'<br><br><br><br><br><br><br><br><form action="logout.php">
-    <input type="submit" value="LOGOUT" class="btn btn-block btn-primary"/>
-</form><br></br></button>';
-        ?>
+echo'<form action="logout.php">
+    <input type="submit" value="LOGOUT" class="btn btn-block btn-primary">
+</form><br></br></button> ';
+        
+ echo' <br>
+        <br>
+        <form action="default.php">   
+    <input type="submit" value="HEAD BACK TO WEB-EXPRESS">
+</form><br></br></button></b>';       
+    ?>
 
 </body>
         

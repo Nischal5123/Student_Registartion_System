@@ -72,6 +72,15 @@ else{
       <div class="avatar"><label>Add a Profile Picture: </label><input type="file" name="avatar" accept="image/*" required /></div>
       <input type="submit" value="Register" name="register" class="btn btn-block btn-primary" />
        <p> Already a user?<a href="login.php" class="button">Please Login</p>
+         
+        
     </form>
-  </div>
-</div>
+    </div>
+    </div>
+    <br>
+        <br>
+    <form action="default.php">   
+    <input type="submit" value="HEAD BACK TO WEB-EXPRESS">
+</form><br></br></button></b>
+  
+
