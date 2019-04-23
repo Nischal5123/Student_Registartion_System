@@ -31,7 +31,7 @@ $r1=mysqli_query($connect,$q1) or die(mysqli_error($connect));
 $reg1=mysqli_fetch_assoc($r1);
 foreach($reg1 as $value1)
 {
-if($value1 >15)
+if($value1 >2)
 {
 printf("ERRROR IN REGISTRATION(MAXIMUM STUDENTS IN A COURSE REACHED)");
 exit();

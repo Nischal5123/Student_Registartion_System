@@ -12,6 +12,14 @@ New Course:<input type="text" name="new"><br/>
 <link rel="stylesheet" type="text/css" href="style.css" /> 
 </head>
 <body>
-<div id="div1"></div>
+	<div id="div1" style="text-align: center;">
+<form name="form1" action="result1.php" >
+	<br>
+	<br>
+	<br>
+	<br>
+<input text-align="center" type="submit" class="myButton" name="Submit" value="Back to Admin Page">
+</form>
+</div>
 </body>
 </html>	
