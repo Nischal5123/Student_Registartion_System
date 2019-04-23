@@ -10,7 +10,7 @@ if(isset($_POST['Submit'])){
         
 
 $uname= $_POST['myusername'];
-$upass= $_POST['mypassword'];
+$upass= md5($_POST['mypassword']);
 
 $_SESSION['username']=$uname;
 $_SESSION['pass']=$upass;

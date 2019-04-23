@@ -1,6 +1,4 @@
-<form name="form1" method="post" action="default.php" >
-<input type="submit" class="myButton" name="Submit" value="Student Login">
-</form>
+
 
 <?php
 session_start();
@@ -43,11 +41,24 @@ New course      :<input type="text" name="new"><br/>
 <input type="submit" class="myButton" name="submit" value="Change Course">
 </form>
 
+<br>
+<br>
+<form action="result.php">
+<input type="submit" class="myButton" name="submit" value="Back to MY Page">
+</form>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css" /> 
 </head>
 <body>
-<div id="div1"></div>
+<div id="div1" style="text-align: center;">
+<form name="form1" action="default.php" >
+	<br>
+	<br>
+	<br>
+	<br>
+<input text-align="center" type="submit" class="myButton" name="Submit" value="Logout">
+</form>
+</div>
 </body>
 </html>	

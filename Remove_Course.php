@@ -14,7 +14,7 @@ $remove = "DELETE FROM regis WHERE  cname='$_GET[cname]' and uname='$_GET[uuname
 
 $results=mysqli_query($connect,$remove) or die(mysqli_error());
 
-echo " COURSE SUCESSFULLY REMOVED<br/><a href='default.php'>Back</a>";
+echo " COURSE SUCESSFULLY REMOVED<br/><a href='result.php'>Back</a>";
 
 
 

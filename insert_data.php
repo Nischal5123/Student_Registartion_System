@@ -10,7 +10,7 @@ $connect = mysqli_connect("localhost", "root", "") or die ("check your server co
 
 mysqli_select_db($connect,"webexpress");
 $name = $_POST['name'];
-$pass = $_POST['pass'];
+$pass = md5($_POST['pass']);
 $branch = $_POST['branch'];
 $year = $_POST['year'];
 
