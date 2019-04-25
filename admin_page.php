@@ -32,7 +32,7 @@ $_SESSION['authuser']=1;
 </tr>
 </table>
 </center>
-<form name="form1" method="post" action="default.php" style="float:left">
+<form name="form1"  action="default.php" style="float:left">
 <input type="submit" class="myButton" name="Submit" value="Student Login">
 </form>
 

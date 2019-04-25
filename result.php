@@ -22,15 +22,17 @@ $query="SELECT * FROM members WHERE username='$uname' and password='$upass'";
 $results=mysqli_query($connect,$query) or die(mysqli_error($connect));
 
 if($row = mysqli_fetch_array($results))
-  { echo"Welcome ". $row['username'] ."!!<br/>";
-  echo "<table  style='width:50%' class='CSSTableGenerator'>
+  { echo"<font color='red'>Welcome       ". $row['username'] ."!!<br/>";
+  echo "<br>
+  <br><table  style='width:50%' class='CSSTableGenerator'>
 USER INFORMATION<tr>
 
 <th>USERNAME</th>
 
-<th>BRANCH</th>
-<th>YEAR OF PASSING</th>
+<th>MAJOR</th>
+<th>GRADUATION YEAR</th>
 </tr>";
+  echo"</font>";
   
   echo "<tr>";
 
@@ -51,6 +53,13 @@ echo "</table>";
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css" /> 
+<style>
+
+  body{
+    background-image: url("https://wallpapercave.com/wp/wp1838742.jpg");
+  }
+
+</style>
 </head>
 <body>
 <div id="div1"></div>
@@ -100,17 +109,6 @@ echo "</table></center>\n";
 </form>
 
 
-		
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="style.css" /> 
-</head>
-<body>
-<div id="div1"></div>
-</body>
-</html>	
-
-<?php
 
 
 

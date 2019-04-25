@@ -90,9 +90,9 @@ table.table1 th {
 </style>
         <table class="table1" border= "1">
             <tr>
-                <th>Major of Interest</th>
-                <th>University Visit Date</th> 
                 <th>Current School</th>
+                <th>University Visit Date</th> 
+                <th>Major of Interest</th>
             </tr>
                 
 

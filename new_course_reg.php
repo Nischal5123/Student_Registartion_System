@@ -44,6 +44,7 @@ echo"<a href='result.php'>Back to my page</a><br/>";
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css" /> 
+
 </head>
 <body>
 <div id="div1"></div>

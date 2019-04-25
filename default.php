@@ -102,6 +102,7 @@ body {
   background-position: center;
   background-repeat:  no-repeat;
 }
+</style>
 </head>
 <body>
 <div id="div1"></div>

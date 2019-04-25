@@ -47,12 +47,11 @@ if(isset($_POST['login_user'])){
       <input type="password" placeholder="Password" name="password" autocomplete="new-password" required />
       <input type="submit" value="Login" name="login_user" class="btn btn-block btn-primary" />
       <p> Not a user?<a href="form.php"><br>Register Here!!</b></a></p>
-        <br>
-        <br>
-        <form action="default.php">   
-    <input type="submit" value="HEAD BACK TO WEB-EXPRESS">
-</form><br></br></button></b>
-
     </form>
   </div>
 </div>
+  <br>
+  <br>
+  <form action="default.php">   
+  <input type="submit" value="HEAD BACK TO WEB-EXPRESS">
+  </form><br></br></button></b>
